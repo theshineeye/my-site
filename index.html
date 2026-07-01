@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TUNE GARAGE — чип-тюнинг, диагностика и программирование авто</title>
+<meta name="description" content="Чип-тюнинг, компьютерная диагностика и программирование автомобилей. Прирост мощности, гарантия, индивидуальные прошивки.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo">
+      <span class="logo-mark"></span>
+      <span>Tune Garage<small>chip-tuning lab</small></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Главная</a></li>
+      <li><a href="about.html">О компании</a></li>
+      <li><a href="contacts.html">Контакты</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="tel:+70000000000" class="nav-phone">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        +7 (000) 000-00-00
+      </a>
+      <a href="contacts.html" class="btn btn-primary">Записаться</a>
+      <button class="nav-toggle" aria-label="Меню"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="container hero-grid">
+    <div>
+      <span class="eyebrow">Chip-tuning &amp; ECU lab</span>
+      <h1>Больше мощности.<br>Меньше расхода.<br><span class="accent">Без компромиссов.</span></h1>
+      <p class="lede">Индивидуальная настройка прошивки двигателя на стенде. Прирост мощности и крутящего момента с сохранением ресурса и заводской надёжности.</p>
+      <div class="hero-actions btn-row">
+        <a href="contacts.html" class="btn btn-primary">Записаться на диагностику</a>
+        <a href="#services" class="btn btn-ghost">Смотреть услуги</a>
+      </div>
+      <p class="hero-note">// Выезд диагноста или работа на собственном дино-стенде</p>
+    </div>
+
+    <div class="dyno reveal">
+      <div class="dyno-head">
+        <span>POWER CURVE — DYNO READOUT</span>
+        <div class="dyno-legend">
+          <span class="leg-stock"><i></i>Стандарт</span>
+          <span class="leg-tuned"><i></i>Stage 2</span>
+        </div>
+      </div>
+      <svg viewBox="0 0 460 220" width="100%" height="220">
+        <defs>
+          <linearGradient id="fadeAmber" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#FF6A1A" stop-opacity=".25"/>
+            <stop offset="100%" stop-color="#FF6A1A" stop-opacity="0"/>
+          </linearGradient>
+        </defs>
+        <!-- grid -->
+        <g stroke="#262B31" stroke-width="1">
+          <line x1="0" y1="40" x2="460" y2="40"/>
+          <line x1="0" y1="80" x2="460" y2="80"/>
+          <line x1="0" y1="120" x2="460" y2="120"/>
+          <line x1="0" y1="160" x2="460" y2="160"/>
+          <line x1="40" y1="0" x2="40" y2="200"/>
+          <line x1="140" y1="0" x2="140" y2="200"/>
+          <line x1="240" y1="0" x2="240" y2="200"/>
+          <line x1="340" y1="0" x2="340" y2="200"/>
+          <line x1="440" y1="0" x2="440" y2="200"/>
+        </g>
+        <!-- tuned area fill -->
+        <path d="M40,170 C100,150 160,70 230,55 C300,42 370,55 440,75 L440,200 L40,200 Z" fill="url(#fadeAmber)"/>
+        <!-- stock curve -->
+        <path class="dyno-path" d="M40,178 C100,165 160,110 230,95 C300,84 370,92 440,108"
+              fill="none" stroke="#5C636C" stroke-width="2" stroke-dasharray="5 5"/>
+        <!-- tuned curve -->
+        <path class="dyno-path" d="M40,170 C100,150 160,70 230,55 C300,42 370,55 440,75"
+              fill="none" stroke="#FF6A1A" stroke-width="2.5"/>
+        <!-- axis labels -->
+        <g font-family="JetBrains Mono" font-size="9" fill="#5C636C">
+          <text x="36" y="214">2000</text>
+          <text x="130" y="214">3500</text>
+          <text x="230" y="214">5000</text>
+          <text x="330" y="214">6500</text>
+          <text x="420" y="214">RPM</text>
+        </g>
+      </svg>
+      <div class="dyno-readout">
+        <div><div class="val">+38<span style="font-size:13px">л.с.</span></div><div class="lbl">Прирост мощности</div></div>
+        <div><div class="val alt">+52<span style="font-size:13px">Нм</span></div><div class="lbl">Прирост момента</div></div>
+        <div><div class="val">100%</div><div class="lbl">Заводской ресурс</div></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="stats">
+  <div class="container stats-grid">
+    <div class="stat reveal"><div class="num"><span data-count="12">0</span> лет</div><div class="lbl">опыта в чип-тюнинге</div></div>
+    <div class="stat reveal"><div class="num"><span data-count="3500" data-suffix="+">0</span></div><div class="lbl">прошитых автомобилей</div></div>
+    <div class="stat reveal"><div class="num">+<span data-count="35" data-suffix="%">0</span></div><div class="lbl">средний прирост мощности</div></div>
+    <div class="stat reveal"><div class="num"><span data-count="2">0</span> года</div><div class="lbl">гарантии на прошивку</div></div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Программы тюнинга</span>
+      <h2>Три уровня настройки</h2>
+    </div>
+
+    <div class="stage-grid reveal">
+      <div class="stage-card">
+        <span class="stage-tag">STAGE 01</span>
+        <h3>Базовая прошивка</h3>
+        <p>Коррекция топливных карт и зажигания в рамках штатного железа. Максимальная отдача без вмешательства в конструкцию.</p>
+        <div class="stage-stats">
+          <div>+15–20%<span>мощность</span></div>
+          <div>1 день<span>срок</span></div>
+        </div>
+      </div>
+      <div class="stage-card">
+        <span class="stage-tag">STAGE 02</span>
+        <h3>Расширенный тюнинг</h3>
+        <p>Прошивка под доработанные впуск/выпуск. Подходит для авто с интеркулером и спортивным фильтром.</p>
+        <div class="stage-stats">
+          <div>+25–35%<span>мощность</span></div>
+          <div>1–2 дня<span>срок</span></div>
+        </div>
+      </div>
+      <div class="stage-card">
+        <span class="stage-tag">STAGE 03</span>
+        <h3>Глубокий тюнинг</h3>
+        <p>Под турбокомплект, форсунки и усиленную трансмиссию. Индивидуальная калибровка под конкретное железо.</p>
+        <div class="stage-stats">
+          <div>от +40%<span>мощность</span></div>
+          <div>по записи<span>срок</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="service-grid reveal">
+      <div class="service-row">
+        <div><h4>Компьютерная диагностика</h4><p>Полное сканирование систем, поиск ошибок и неисправностей</p></div>
+        <span class="arrow mono">→</span>
+      </div>
+      <div class="service-row">
+        <div><h4>Прошивка АКПП / вариатора</h4><p>Адаптация коробки под изменённую мощность двигателя</p></div>
+        <span class="arrow mono">→</span>
+      </div>
+      <div class="service-row">
+        <div><h4>Отключение экологических систем</h4><p>DPF / EGR / катализатор — для спортивного и внедорожного использования</p></div>
+        <span class="arrow mono">→</span>
+      </div>
+      <div class="service-row">
+        <div><h4>Восстановление и перепрошивка ЭБУ</h4><p>Ремонт блоков управления, удаление ошибок и иммобилайзера</p></div>
+        <span class="arrow mono">→</span>
+      </div>
+    </div>
+    <p class="disclaimer reveal">Отключение экологических систем выполняется по запросу клиента и предназначено для использования вне дорог общего пользования. Уточняйте требования законодательства вашего региона.</p>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Как мы работаем</span>
+      <h2>Процесс в пять шагов</h2>
+    </div>
+    <div class="process reveal">
+      <div class="proc-step"><div class="proc-num">1</div><h4>Заявка</h4><p>Звонок или сообщение в мессенджер, согласуем время</p></div>
+      <div class="proc-step"><div class="proc-num">2</div><h4>Диагностика</h4><p>Полное сканирование систем и оценка состояния авто</p></div>
+      <div class="proc-step"><div class="proc-num">3</div><h4>Подбор прошивки</h4><p>Программа под цели клиента и комплектацию авто</p></div>
+      <div class="proc-step"><div class="proc-num">4</div><h4>Тюнинг</h4><p>Загрузка и калибровка на стенде</p></div>
+      <div class="proc-step"><div class="proc-num">5</div><h4>Контроль</h4><p>Тест-драйв и замер показателей после прошивки</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="marquee-wrap">
+  <div class="marquee">
+    <span>BMW</span><span>AUDI</span><span>VOLKSWAGEN</span><span>MERCEDES-BENZ</span><span>TOYOTA</span><span>KIA</span><span>HYUNDAI</span><span>SKODA</span><span>LADA</span><span>RENAULT</span>
+    <span>BMW</span><span>AUDI</span><span>VOLKSWAGEN</span><span>MERCEDES-BENZ</span><span>TOYOTA</span><span>KIA</span><span>HYUNDAI</span><span>SKODA</span><span>LADA</span><span>RENAULT</span>
+  </div>
+</div>
+
+<section>
+  <div class="container">
+    <div class="cta-banner reveal">
+      <div>
+        <h2>Готовы раскрыть потенциал двигателя?</h2>
+        <p>Запишитесь на диагностику — подберём программу под ваш автомобиль и задачи.</p>
+      </div>
+      <a href="contacts.html" class="btn btn-primary">Записаться</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>Tune Garage</h4>
+        <p>Чип-тюнинг, диагностика и программирование автомобилей. Работаем с дино-стендом и оригинальным оборудованием.</p>
+        <div class="socials">
+          <a href="#" aria-label="WhatsApp">W</a>
+          <a href="#" aria-label="Telegram">T</a>
+          <a href="#" aria-label="Instagram">I</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Навигация</h4>
+        <a href="index.html">Главная</a>
+        <a href="about.html">О компании</a>
+        <a href="contacts.html">Контакты</a>
+      </div>
+      <div class="footer-col">
+        <h4>Услуги</h4>
+        <a href="index.html#services">Чип-тюнинг</a>
+        <a href="index.html#services">Диагностика</a>
+        <a href="index.html#services">Прошивка АКПП</a>
+      </div>
+      <div class="footer-col">
+        <h4>Контакты</h4>
+        <p>+7 (000) 000-00-00</p>
+        <p>info@tunegarage.example</p>
+        <p>г. Город, ул. Примерная, 1</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 TUNE GARAGE. Все права защищены.</span>
+      <span>ИП Иванов И. И. · ОГРНИП 000000000000</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
